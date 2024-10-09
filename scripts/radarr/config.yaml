@@ -1,0 +1,28 @@
+radarr:
+  api_key: "XXXXXXXXXXXXXXXXXXXXXXXXXX"
+  host: "127.0.0.1"
+  port: "7878"
+  scheduling:
+    frequency: "weekly"  # Options: daily, weekly, monthly
+    max_renames_per_run: 100
+    last_run: ""  # Will be updated by the script
+    renames_performed: 0  # Will be updated by the script
+
+sonarr:
+  api_key: "YYYYYYYYYYYYYYYYYYYYYYYYYYYY"
+  host: "127.0.0.1"
+  port: "8989"
+  scheduling:
+    frequency: "weekly"  # Options: daily, weekly, monthly
+    max_renames_per_run: 100
+    last_run: ""  # Will be updated by the script
+    renames_performed: 0  # Will be updated by the script
+
+naming:
+  movie_format: "{Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}][{Mediainfo VideoCodec}]{-Release Group}"
+  folder_format: "{Movie CleanTitle} ({Release Year}) {imdb-{ImdbId}}"
+  series_format: "{Series CleanTitle} - S{season:00}E{episode:00} - {Episode CleanTitle} {[Quality Full]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}][{Mediainfo VideoCodec}]{-Release Group}"
+  season_folder_format: "Season {season:00}"
+
+exclude:
+  filenames_containing: "NoDTS"
